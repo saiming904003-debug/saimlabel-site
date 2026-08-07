@@ -1,0 +1,180 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/custom-woven-labels.html",
+      "destination": "/woven-labels/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-woven-patches.html",
+      "destination": "/woven-patches/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-woven-keychains.html",
+      "destination": "/woven-keychains/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-care-labels.html",
+      "destination": "/care-labels/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-embroidery-patches.html",
+      "destination": "/embroidered-patches/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-embroidery-keychains.html",
+      "destination": "/embroidered-keychains/",
+      "permanent": true
+    },
+    {
+      "source": "/chenille-patches.html",
+      "destination": "/chenille-patches/",
+      "permanent": true
+    },
+    {
+      "source": "/heat-transfer-printing-patch.html",
+      "destination": "/heat-transfer-printing-patch/",
+      "permanent": true
+    },
+    {
+      "source": "/pvc-patches.html",
+      "destination": "/pvc-patches/",
+      "permanent": true
+    },
+    {
+      "source": "/leather-patches.html",
+      "destination": "/leather-patches/",
+      "permanent": true
+    },
+    {
+      "source": "/hang-tags.html",
+      "destination": "/hang-tags/",
+      "permanent": true
+    },
+    {
+      "source": "/heat-transfer-labels.html",
+      "destination": "/heat-transfer-labels/",
+      "permanent": true
+    },
+    {
+      "source": "/materials-options.html",
+      "destination": "/products/",
+      "permanent": true
+    },
+    {
+      "source": "/quality.html",
+      "destination": "/how-to-order/",
+      "permanent": true
+    },
+    {
+      "source": "/applications.html",
+      "destination": "/applications/",
+      "permanent": true
+    },
+    {
+      "source": "/apparel-brand-trims-supplier.html",
+      "destination": "/applications/apparel-brands/",
+      "permanent": true
+    },
+    {
+      "source": "/hat-cap-patches-labels.html",
+      "destination": "/applications/hats-caps/",
+      "permanent": true
+    },
+    {
+      "source": "/uniform-club-patches.html",
+      "destination": "/applications/uniforms-clubs/",
+      "permanent": true
+    },
+    {
+      "source": "/streetwear-patches-keychains.html",
+      "destination": "/applications/streetwear/",
+      "permanent": true
+    },
+    {
+      "source": "/kidswear-soft-labels-care-labels.html",
+      "destination": "/applications/kidswear/",
+      "permanent": true
+    },
+    {
+      "source": "/promotional-keychains-patches.html",
+      "destination": "/applications/promotional-merch/",
+      "permanent": true
+    },
+    {
+      "source": "/product-gallery.html",
+      "destination": "/gallery/",
+      "permanent": true
+    },
+    {
+      "source": "/products.html",
+      "destination": "/products/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/faq.html",
+      "destination": "/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/quote/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/woven-vs-embroidered-patches.html",
+      "destination": "/blog/woven-vs-embroidered-patches/",
+      "permanent": true
+    },
+    {
+      "source": "/care-label-symbols-compliance-guide.html",
+      "destination": "/blog/care-label-symbols/",
+      "permanent": true
+    },
+    {
+      "source": "/care-label-checklist.html",
+      "destination": "/blog/care-label-requirements-us-eu/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-labels-buying-guide.html",
+      "destination": "/blog/custom-labels-buying-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/woven-label-fold-guide.html",
+      "destination": "/blog/woven-label-fold-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/patch-backing-border-guide.html",
+      "destination": "/blog/patch-backing-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-keychain-jet-tag-guide.html",
+      "destination": "/blog/fabric-keychain-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/artwork-guide.html",
+      "destination": "/blog/artwork-preparation-guide/",
+      "permanent": true
+    }
+  ]
+}

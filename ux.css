@@ -1,0 +1,59 @@
+/* ============================================================
+   UX Pack v1 — 通用动效/交互样式层
+   主题适配: 站点 :root 里定义 --ux-accent(强调色) / --ux-surface(浮层底色)
+   不定义则回退到中性值。接入: </head> 前 <link rel="stylesheet" href="/ux.css">
+   ============================================================ */
+:root {
+  --ux-accent-fallback: #C75B33;
+  --ux-surface-fallback: rgba(24, 24, 32, 0.92);
+}
+
+/* 1. 滚动入场 */
+.ux-reveal { opacity: 0; transform: translateY(26px); transition: opacity .6s ease var(--ux-d, 0ms), transform .6s cubic-bezier(.22,.61,.36,1) var(--ux-d, 0ms); }
+.ux-reveal.ux-in { opacity: 1; transform: none; }
+
+/* 2. FAQ 手风琴(渐进增强静态 .faq-item / .faq-q / .faq-a) */
+.ux-faq .faq-q { cursor: pointer; position: relative; padding-right: 42px; user-select: none; }
+.ux-faq .faq-q::after { content: '+'; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 1.35rem; font-weight: 700; color: var(--ux-accent, var(--gold, var(--ux-accent-fallback))); transition: transform .3s; line-height: 1; }
+.ux-faq.ux-open .faq-q::after { transform: translateY(-50%) rotate(45deg); }
+.ux-faq .faq-a { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .45s cubic-bezier(.33,1,.68,1), opacity .35s, padding-top .3s, padding-bottom .3s, margin-top .3s, margin-bottom .3s; }
+.ux-faq:not(.ux-open) .faq-a { padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important; }
+.ux-faq.ux-open .faq-a { opacity: 1; }
+.ux-faq .faq-q:focus-visible { outline: 2px solid var(--ux-accent, var(--gold, var(--ux-accent-fallback))); outline-offset: 3px; border-radius: 4px; }
+
+/* 3. 灯箱 */
+.ux-zoomable { cursor: zoom-in; transition: transform .35s ease; }
+.ux-zoomable:hover { transform: scale(1.015); }
+.ux-lightbox { position: fixed; inset: 0; z-index: 2000; background: rgba(4,4,8,.94); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; opacity: 0; pointer-events: none; transition: opacity .3s; padding: 4vh 4vw; }
+.ux-lightbox.ux-lb-on { opacity: 1; pointer-events: auto; }
+.ux-lightbox img { max-width: 92vw; max-height: 80vh; border-radius: 10px; box-shadow: 0 30px 90px rgba(0,0,0,.7); transform: scale(.94); transition: transform .35s cubic-bezier(.22,.61,.36,1); cursor: zoom-out; }
+.ux-lightbox.ux-lb-on img { transform: scale(1); }
+.ux-lb-cap { color: rgba(255,255,255,.78); font-size: .88rem; text-align: center; max-width: 640px; line-height: 1.5; }
+.ux-lb-close { position: absolute; top: 16px; right: 22px; background: none; border: none; color: #fff; font-size: 2.4rem; cursor: pointer; line-height: 1; opacity: .7; transition: opacity .2s, transform .25s; z-index: 1; }
+.ux-lb-close:hover { opacity: 1; transform: rotate(90deg); }
+
+/* 4. 返回顶部(桌面;移动端有粘性 CTA,避免浮层打架) */
+.ux-top { position: fixed; bottom: 112px; right: 30px; z-index: 997; width: 44px; height: 44px; border-radius: 50%; background: var(--ux-surface, var(--ux-surface-fallback)); border: 1px solid var(--ux-accent, var(--gold, var(--ux-accent-fallback))); color: var(--ux-accent, var(--gold, var(--ux-accent-fallback))); font-size: 1.05rem; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity .3s, transform .3s, background .2s, color .2s; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.ux-top.ux-top-on { opacity: 1; pointer-events: auto; transform: none; }
+.ux-top:hover { background: var(--ux-accent, var(--gold, var(--ux-accent-fallback))); color: #fff; }
+@media (max-width: 768px) { .ux-top { display: none; } }
+
+/* 5. 表格横滑 */
+.ux-tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.ux-tscroll > table { min-width: 560px; }
+
+/* 6. 卡片图片微交互(按站点卡片类名补充,这里给通用 .card) */
+.card { overflow: hidden; }
+.card img { transition: transform .5s cubic-bezier(.22,.61,.36,1); }
+.card:hover img { transform: scale(1.05); }
+
+/* 7. 按钮按压反馈(按站点按钮类名补充) */
+.btn-primary:active, .btn-submit:active, .btn:active { transform: translateY(0) scale(.97); transition-duration: .08s; }
+
+/* 8. reduced-motion 全禁 */
+@media (prefers-reduced-motion: reduce) {
+  .ux-reveal { opacity: 1; transform: none; transition: none; }
+  .ux-zoomable, .card img, .ux-lightbox img { transition: none; }
+  .ux-faq .faq-a { transition: none; }
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOQ and Sampling Explained: How Trim Orders Actually Work</title>
+<meta name="description" content="Why minimum order quantities exist for labels and patches, how MOQ is counted per design and size, what sampling involves, and why repeat orders run faster.">
+<link rel="canonical" href="https://saimlabel.com/blog/moq-sampling-guide/">
+<link rel="alternate" hreflang="x-default" href="https://saimlabel.com/blog/moq-sampling-guide/">
+<link rel="alternate" hreflang="en" href="https://saimlabel.com/blog/moq-sampling-guide/">
+<meta name="theme-color" content="#171009">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SAIM Label">
+<meta property="og:title" content="MOQ and Sampling Explained: How Trim Orders Actually Work">
+<meta property="og:description" content="Why minimum order quantities exist for labels and patches, how MOQ is counted per design and size, what sampling involves, and why repeat orders run faster.">
+<meta property="og:url" content="https://saimlabel.com/blog/moq-sampling-guide/">
+<meta property="og:image" content="https://saimlabel.com/assets/img/factory-weaving.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/ux.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://saimlabel.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://saimlabel.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "MOQ and Sampling Explained: How Trim Orders Actually Work", "item": "https://saimlabel.com/blog/moq-sampling-guide/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "MOQ and Sampling Explained: How Trim Orders Actually Work", "description": "Why minimum order quantities exist for labels and patches, how MOQ is counted per design and size, what sampling involves, and why repeat orders run faster.", "image": "https://saimlabel.com/assets/img/factory-weaving.webp", "datePublished": "2026-07-02", "dateModified": "2026-07-02", "author": {"@id": "https://saimlabel.com/#org"}, "publisher": {"@id": "https://saimlabel.com/#org"}, "mainEntityOfPage": "https://saimlabel.com/blog/moq-sampling-guide/"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the MOQ for woven labels?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on construction and size; many catalog items run from 50 pieces. The gallery shows real MOQs per item, and your artwork gets an exact number in the quote."}}, {"@type": "Question", "name": "Do samples cost money?", "acceptedAnswer": {"@type": "Answer", "text": "Digital proofs are part of every order. Physical pre-production samples are arranged and priced in the quote — the answer depends on construction and whether a mold or digitizing is involved."}}, {"@type": "Question", "name": "Can I order below the stated MOQ?", "acceptedAnswer": {"@type": "Answer", "text": "Sometimes, at a setup-weighted price. Ask with the artwork — some constructions flex further than others, as the low MOQs in the gallery show."}}, {"@type": "Question", "name": "Why are repeat orders faster?", "acceptedAnswer": {"@type": "Answer", "text": "Approved artwork, machine settings, stitch files and molds are kept on file, so repeats go straight to production without sampling."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap navbar">
+<a class="logo" href="/"><b>SAIM</b>&nbsp;Label <span>Garment Trims</span></a>
+<nav class="nav-links" aria-label="Main"><div class="nav-item nav-item--mega"><a class="top" href="/products/">Products <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></a><div class="dropdown dropdown--mega"><div class="dd-head">Main products</div><a href="/woven-labels/">Custom Woven Labels</a><a href="/woven-patches/">Custom Woven Patches</a><a href="/woven-keychains/">Custom Woven Keychains</a><a href="/care-labels/">Custom Care Labels</a><div class="dd-head">Also in-house</div><a href="/embroidered-patches/">Custom Embroidery Patches</a><a href="/embroidered-keychains/">Custom Embroidery Keychains</a><a href="/chenille-patches/">Custom Chenille Patches</a><a href="/heat-transfer-printing-patch/">Custom Felt and Sequin Patches</a><a href="/pvc-patches/">Custom PVC Patches</a><a href="/leather-patches/">Custom Leather Patches</a><a href="/hang-tags/">Custom Hang Tags</a><a href="/heat-transfer-labels/">Custom Heat Transfer Labels</a><hr><a class="dd-all" href="/products/"><strong>All products →</strong></a></div></div><a href="/customization/">Customization</a><a href="/factory/">Factory</a><a href="/resources/">Resources</a><a href="/about/">About</a><a class="btn primary nav-cta" href="/quote/">Get a Quote</a></nav>
+<button class="burger" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+</div><div class="mobile-menu"><a href="/products/">Products</a><a href="/customization/">Customization</a><a href="/factory/">Factory</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/quote/">Get a Quote</a></div></header>
+<main id="main">
+
+<div class="wrap crumbs"><a href="/">Home</a> › <a href="/blog/">Blog</a> › MOQ and Sampling Explained: How Trim Orders Actually Work</div>
+<section class="band"><div class="wrap prose">
+<span class="kicker">Buyer guide</span>
+<h1>MOQ and Sampling Explained: How Trim Orders Actually Work</h1>
+<p class="meta-line">By the SAIM Label factory team · Updated 2026-07-02 · 5 min read</p>
+<p class="answer" style="font-size:1.1rem"><strong>Short answer:</strong> MOQ exists because every design needs machine setup — loom threading, embroidery digitizing, or a PVC mold — that costs the same whether you order 50 or 5,000. MOQ counts per design and size version. At SAIM Label many catalog items start from 50 pieces, sampling is agreed in the quote, and approved repeat designs skip sampling entirely.</p>
+<div class="toc"><b>In this guide</b><ol><li><a href="#why">Why MOQ exists at all</a></li><li><a href="#count">How MOQ is counted</a></li><li><a href="#sampling">Proofs, samples and when each applies</a></li><li><a href="#tiers">Use quantity tiers to see the curve</a></li></ol></div>
+<img src="/assets/img/factory-weaving.webp" alt="Computer weaving machines set up for a label production run" width="1200" height="900" loading="lazy" decoding="async">
+<h2 id="why">Why MOQ exists at all</h2>
+<p>A woven label run means threading a loom to your artwork; an embroidered patch means digitizing the stitch file; a PVC patch means cutting a mold. That setup cost is identical whether the run is 50 pieces or 5,000 — which is why per-unit prices fall so steeply with quantity, and why there is a floor below which a run stops making sense for both sides. MOQ is that floor, not a negotiation tactic.</p>
+<h2 id="count">How MOQ is counted</h2>
+<ul>
+<li><b>Per design</b> — each artwork is its own setup, so two logos at 100 pieces each are two runs, not one 200-piece run.</li>
+<li><b>Per size / color version</b> — usually counted separately when the setup changes; size runs of the same label design are the friendly exception, produced in one run with a size breakdown.</li>
+<li><b>Real numbers beat rules</b> — our <a href="/gallery/">sample gallery</a> shows the actual MOQ on every one of the 88 catalog photos; many start at 50 pieces and some lower.</li>
+</ul>
+<div class="cta-inline"><p>Pricing this for a real order? Send the artwork — construction suggestions and tiered pricing come back free.</p><a class="btn primary" href="/quote/">Get a Quote</a></div><h2 id="sampling">Proofs, samples and when each applies</h2>
+<p>Two different checkpoints get called "sample". The <b>digital proof</b> — a production drawing with final size, colors and construction — is standard on every order and catches most issues. The <b>pre-production sample</b> — a physical piece made before bulk — applies when hand feel, color accuracy or a new construction matters. Sampling arrangements and costs are stated in the quote rather than assumed; and once a design is approved, <b>repeat orders skip sampling</b> because the settings, files and molds stay on file.</p>
+<h2 id="tiers">Use quantity tiers to see the curve</h2>
+<p>Ask for two or three quantities in one RFQ — 100 / 500 / 2,000 — and the quote shows how steeply your design's unit price falls. That one habit turns MOQ from a wall into a planning tool: sometimes 500 pieces cost only marginally more than 300, and the tier view is how you find out before committing.</p>
+
+<h2 id="faq">FAQ</h2>
+<div class="faq-list"><div class="faq-item"><h3 class="faq-q">What is the MOQ for woven labels?</h3><div class="faq-a"><p>It depends on construction and size; many catalog items run from 50 pieces. The gallery shows real MOQs per item, and your artwork gets an exact number in the quote.</p></div></div><div class="faq-item"><h3 class="faq-q">Do samples cost money?</h3><div class="faq-a"><p>Digital proofs are part of every order. Physical pre-production samples are arranged and priced in the quote — the answer depends on construction and whether a mold or digitizing is involved.</p></div></div><div class="faq-item"><h3 class="faq-q">Can I order below the stated MOQ?</h3><div class="faq-a"><p>Sometimes, at a setup-weighted price. Ask with the artwork — some constructions flex further than others, as the low MOQs in the gallery show.</p></div></div><div class="faq-item"><h3 class="faq-q">Why are repeat orders faster?</h3><div class="faq-a"><p>Approved artwork, machine settings, stitch files and molds are kept on file, so repeats go straight to production without sampling.</p></div></div></div>
+<p>Related reading: <a href="/how-to-order/">How to order</a> · <a href="/gallery/">Sample gallery with real MOQs</a> · <a href="/quote/">Request a quote</a></p>
+</div></section>
+<section class="band accent"><div class="wrap split">
+<div><span class="kicker">Start your order</span><h2>Turn the guide into a quote</h2><p class="lede">Send artwork, quantity and application — we answer with real options, not a form letter.</p></div>
+<div class="actions"><a class="btn light" href="/quote/">Get a Quote</a>
+<a class="btn ghost" style="border-color:#fff;color:#fff" href="https://wa.me/8613416642457?text=Hello%20SAIM%20Label%2C%20I%20would%20like%20a%20quote%20for%20custom%20woven%20labels%2C%20patches%20or%20keychains." target="_blank" rel="noopener">WhatsApp +86 134 1664 2457</a></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap cols">
+<div><div class="brand"><b>SAIM</b> Label</div>
+<p>Dongguan Saiming Garment Accessories Co., Ltd.<br>Dongcheng District, Dongguan, Guangdong, China</p>
+<a href="mailto:manager@saimlabel.com">manager@saimlabel.com</a>
+<a href="https://wa.me/8613416642457?text=Hello%20SAIM%20Label%2C%20I%20would%20like%20a%20quote%20for%20custom%20woven%20labels%2C%20patches%20or%20keychains." target="_blank" rel="noopener">WhatsApp +86 134 1664 2457</a></div>
+<div><h4>Main Products</h4><a href="/woven-labels/">Custom Woven Labels</a><a href="/woven-patches/">Custom Woven Patches</a><a href="/woven-keychains/">Custom Woven Keychains</a><a href="/care-labels/">Custom Care Labels</a></div>
+<div><h4>More</h4><a href="/embroidered-patches/">Custom Embroidery Patches</a><a href="/embroidered-keychains/">Custom Embroidery Keychains</a><a href="/products/">All products</a><a href="/customization/">Customization</a><a href="/applications/">Applications</a><a href="/gallery/">Sample gallery</a><a href="/resources/">Buyer resources</a></div>
+<div><h4>Company</h4><a href="/about/">About us</a><a href="/factory/">Inside the factory</a><a href="/how-to-order/">How to order</a><a href="/faq/">FAQ</a><a href="/quote/">Request a quote</a><a href="/privacy/">Privacy</a></div>
+</div><div class="wrap foot-bottom"><span>© 2014–2026 Dongguan Saiming Garment Accessories Co., Ltd.</span><span>Custom woven labels, patches, keychains &amp; care labels, made in Dongguan</span></div></footer>
+<a class="wa-float" href="https://wa.me/8613416642457?text=Hello%20SAIM%20Label%2C%20I%20would%20like%20a%20quote%20for%20custom%20woven%20labels%2C%20patches%20or%20keychains." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<img src="/assets/img/whatsapp-chat-badge.webp" width="210" height="90" alt="Chat on WhatsApp" loading="lazy" decoding="async">
+</a>
+<div class="sticky-bar"><a class="wa" href="https://wa.me/8613416642457?text=Hello%20SAIM%20Label%2C%20I%20would%20like%20a%20quote%20for%20custom%20woven%20labels%2C%20patches%20or%20keychains." target="_blank" rel="noopener">WhatsApp</a><a class="qt" href="/quote/">Get a Quote</a></div>
+<script src="/js/main.js" defer></script>
+<script src="/js/ux.js" defer></script>
+</body>
+</html>

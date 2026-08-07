@@ -1,0 +1,39 @@
+/* Hero FX: homepage banner motion layer (weaving motif). Loaded on / only. */
+.home-hero{position:relative;overflow:hidden}
+.home-hero .wrap{position:relative;z-index:2}
+#heroThreads{position:absolute;inset:0;z-index:0;pointer-events:none}
+
+/* Soft gold loom-light glow drifting behind the headline */
+.home-hero::before{content:"";position:absolute;z-index:1;left:-14%;top:-32%;width:62%;height:130%;background:radial-gradient(closest-side,rgba(217,168,78,.13),transparent 70%);pointer-events:none;animation:fxGlow 9s ease-in-out infinite alternate}
+@keyframes fxGlow{from{opacity:.5;transform:translateY(-2%)}to{opacity:1;transform:translateY(3%)}}
+
+/* Staggered entrance for the copy column */
+@keyframes fxUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.home-hero .kicker,.home-hero h1,.home-hero p.answer,.home-hero .price-strip,.home-hero .actions{animation:fxUp .7s cubic-bezier(.22,.61,.36,1) both}
+.home-hero h1{animation-delay:.08s}
+.home-hero p.answer{animation-delay:.16s}
+.home-hero .price-strip{animation-delay:.24s}
+.home-hero .actions{animation-delay:.32s}
+
+/* Six-color woven underline draws itself beneath the H1 */
+.home-hero h1::after{content:"";display:block;width:min(240px,46%);height:4px;margin-top:16px;border-radius:2px;background:linear-gradient(90deg,#A67C24 0 17%,#8C4A1B 17% 33%,#D9C9A6 33% 50%,#3E6B52 50% 66%,#5C3A18 66% 83%,#D9A84E 83% 100%);transform-origin:left;animation:fxDraw 1s cubic-bezier(.22,.61,.36,1) .5s both}
+@keyframes fxDraw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* Sample plates settle in, back plate keeps a slow float */
+.home-hero .plates{animation:fxUp .9s cubic-bezier(.22,.61,.36,1) .2s both}
+.home-hero .plates .plate-b{animation:fxFloat 7s ease-in-out 1.6s infinite alternate}
+@keyframes fxFloat{from{transform:rotate(2.2deg) translateY(0)}to{transform:rotate(2.7deg) translateY(-7px)}}
+
+/* Thread strip below the hero: slow satin sheen */
+.threads{position:relative;overflow:hidden}
+.threads::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 0 42%,rgba(245,235,217,.38) 50%,transparent 58% 100%);background-size:260% 100%;background-position:130% 0;animation:fxSheen 6s ease-in-out 1s infinite}
+@keyframes fxSheen{0%{background-position:130% 0}60%,100%{background-position:-60% 0}}
+
+/* Price strip micro-interaction */
+.home-hero .price-strip span{transition:transform .25s ease,box-shadow .25s ease}
+.home-hero .price-strip span:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.28)}
+
+@media (prefers-reduced-motion:reduce){
+  .home-hero::before,.home-hero .kicker,.home-hero h1,.home-hero p.answer,.home-hero .price-strip,.home-hero .actions,.home-hero .plates,.home-hero .plates .plate-b,.threads::after,.home-hero h1::after{animation:none}
+  #heroThreads{display:none}
+}
