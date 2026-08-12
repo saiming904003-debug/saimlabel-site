@@ -1,6 +1,12 @@
 /* SAIM Label v3 — "工艺馆" dark craft-hall shell + paper specimen surfaces
    canvas(深咖织物底) + paper(米纸内容面) + gold(丝线金强调) + green(WhatsApp) ≤7色
    radius 2档(8/4) shadow 3档 spacing 8px 基数;类名契约与 v2 完全一致 */
+/* self-hosted fonts (latin subset) — no render-blocking third-party request */
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:optional;src:url(../fonts/Fraunces-600.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:optional;src:url(../fonts/Inter-400.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url(../fonts/Inter-400.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url(../fonts/Inter-400.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:optional;src:url(../fonts/Inter-400.woff2) format('woff2')}
 :root{
   --canvas:#171009; --canvas-2:#231A10; --canvas-line:rgba(240,224,196,.14);
   --cream:#F5EBD9; --cream-2:rgba(245,235,217,.74); --cream-3:rgba(245,235,217,.52);
