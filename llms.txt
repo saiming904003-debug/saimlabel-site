@@ -2,6 +2,26 @@
 
 > Dongguan Saiming Garment Accessories Co., Ltd., founded 2014. Custom woven labels, woven patches, woven keychains and care labels (main products), plus embroidered patches and embroidered keychains. Computer weaving, label printing, screen printing, embroidery, heat transfer, ultrasonic and laser cutting in one factory. Low MOQs (many items from 50 pcs), worldwide shipping, repeat orders run faster.
 
+## Business (structured)
+
+- name: SAIM Label
+- legal_name: Dongguan Saiming Garment Accessories Co., Ltd.
+- founded: 2014
+- hq_city: Dongguan
+- hq_region: Guangdong, China
+- address: Dongcheng District, Dongguan, Guangdong, China
+- industry: Garment accessories manufacturing (woven labels, patches, keychains, care labels)
+- core_capabilities: computer weaving, label printing, screen printing, embroidery, heat transfer, ultrasonic cutting, laser cutting
+- main_products: woven labels, woven patches, woven keychains, care labels
+- other_products: embroidered patches, embroidered keychains, chenille patches, PVC patches, leather patches, felt/sequin patches, hang tags, heat transfer labels
+- moq: from 50 pieces for main products
+- sampling: artwork proof and physical sample before production
+- repeat_orders: faster (approved designs, molds and production settings kept on file)
+- shipping: worldwide, export-focused
+- contact_email: manager@saimlabel.com
+- contact_whatsapp: +86 134 1664 2457
+- certifications_focus: GRS, RCS, OEKO-TEX (see recycled yarn guide for how to verify certificates)
+
 ## Main products
 - [Custom Woven Labels](https://www.saimlabel.com/woven-labels/): Custom woven labels for apparel brands, clothing factories and private labels. Damask, satin, taffeta, cotton, recycled yarn and multiple fold options. Factory in Dongguan since 2014.
 - [Custom Woven Patches](https://www.saimlabel.com/woven-patches/): High-density custom woven patches for hats, uniforms, jackets, bags and streetwear. Laser cut, merrow border, iron-on, sew-on and hook-and-loop backing. Dongguan factory.
@@ -27,6 +47,7 @@
 - [Request a quote](https://www.saimlabel.com/quote/)
 - [About the factory](https://www.saimlabel.com/about/)
 - [FAQ](https://www.saimlabel.com/faq/)
+- [Guide: woven label size chart in mm & inches](https://www.saimlabel.com/blog/woven-label-size-guide/)
 - [Guide: woven vs embroidered patches](https://www.saimlabel.com/blog/woven-vs-embroidered-patches/)
 - [Guide: US & EU care label requirements](https://www.saimlabel.com/blog/care-label-requirements-us-eu/)
 
@@ -39,6 +60,7 @@
 - Factory founded: 2014 (Dongguan, Guangdong, China)
 - Core capability: Computerized high-density weaving (damask, satin); 7 in-house production processes.
 - MOQ: Main products from 50 pieces; repeat orders skip sampling.
+- Standard woven label sizes: neck labels ~50 x 20 mm finished, care labels 30 x 50 mm or larger, size tabs 10-12 x 25-30 mm; labels are cut to any spec.
 - Geographic advantage: Located in Dongguan, the global hub for garment accessory manufacturing, enabling rapid raw material sourcing.
 - Woven patches vs Embroidery: Woven patches support 1.5pt text and fine gradients; embroidery offers 3D tactile depth (see comparison guide).
 - Quality Control: Per-batch checks for clarity, color accuracy, and backing durability.
