@@ -34,4 +34,13 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
 Sitemap: https://www.saimlabel.com/sitemap.xml
