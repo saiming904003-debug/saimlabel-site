@@ -104,6 +104,18 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "SAIM Label Factory & Team — Company Overview",
+    "description": "A two-minute introduction to the SAIM Label factory in Dongguan: equipment, working environment, people and the finished trim range.",
+    "thumbnailUrl": "https://www.saimlabel.com/assets/img/saim-label-factory-video-poster.webp",
+    "uploadDate": "2026-08-26",
+    "duration": "PT120S",
+    "contentUrl": "https://www.saimlabel.com/assets/video/saim-label-factory-overview.mp4"
+  }
+  </script>
 <style>
 /* self-hosted fonts (latin subset) — no render-blocking third-party request */
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:optional;src:url(assets/fonts/Fraunces-600.woff2) format('woff2')}
@@ -828,9 +840,10 @@ footer a:hover{color:var(--gold)}
 <!-- FACTORY — dark band -->
 <section class="band dark"><div class="wrap split rev">
   <figure class="media rv company-video company-video--home">
-    <video class="company-video__media" muted autoplay loop playsinline controls preload="none"
+    <video class="company-video__media" muted loop playsinline controls preload="none"
       poster="assets/img/saim-label-factory-video-poster.webp"
       data-video-src="/assets/video/saim-label-factory-overview.mp4">
+      <source src="/assets/video/saim-label-factory-overview.mp4" type="video/mp4">
       <a href="/assets/video/saim-label-factory-overview.mp4">Watch the SAIM Label company video</a>
     </video>
     <figcaption>Inside SAIM Label: equipment, production work, team and finished trims.</figcaption>
