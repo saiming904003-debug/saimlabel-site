@@ -507,7 +507,7 @@ footer a:hover{color:var(--gold)}
 @keyframes wa-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @media(prefers-reduced-motion:reduce){.wa-float{animation:none}}
 @media(max-width:760px){.wa-float{display:none}}
-@media (max-width:760px){.sticky-bar{display:grid}body{padding-bottom:52px}}
+@media (max-width:760px){.sticky-bar{display:grid;transition:opacity .3s ease,transform .3s ease,visibility .3s}body{padding-bottom:64px}.sticky-bar.ux-bar-hide{opacity:0;visibility:hidden;transform:translateY(100%);pointer-events:none}}
 
 /* reveal */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
@@ -1038,7 +1038,8 @@ footer a:hover{color:var(--gold)}
   <a class="qt" href="/quote/">Get a Quote</a>
 </div>
 
-<script src="js/main.js" defer></script>
+<script src="js/main.js" defer>
+<script src="js/ux.js" defer></script>
 <script>
 (function(){
   "use strict";
