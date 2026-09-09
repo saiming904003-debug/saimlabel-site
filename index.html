@@ -245,7 +245,11 @@ header.site.scrolled{box-shadow:0 8px 32px -12px rgba(0,0,0,.6)}
 .ribbon a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 
 /* hero */
-.hero{background:var(--canvas);background-image:var(--twill);color:var(--cream-2);border-bottom:1px solid var(--canvas-line)}
+.hero{background:var(--canvas);background-image:var(--twill);color:var(--cream-2);border-bottom:1px solid var(--canvas-line);position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:2}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-video{width:100%;height:100%;object-fit:cover;display:block}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,9,.82) 0%,rgba(10,12,9,.62) 42%,rgba(10,12,9,.30) 100%)}
 .hero .wrap{display:grid;grid-template-columns:1fr 1.14fr;gap:44px;align-items:center;padding-block:clamp(18px,2.6vw,34px);max-width:1280px}
 .hero h1{color:var(--cream);margin-bottom:10px;text-wrap:balance}
 .hero .lede{font-size:1rem;margin-bottom:.5em}
@@ -507,7 +511,7 @@ footer a:hover{color:var(--gold)}
 @keyframes wa-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @media(prefers-reduced-motion:reduce){.wa-float{animation:none}}
 @media(max-width:760px){.wa-float{display:none}}
-@media (max-width:760px){.sticky-bar{display:grid;transition:opacity .3s ease,transform .3s ease,visibility .3s}body{padding-bottom:64px}.sticky-bar.ux-bar-hide{opacity:0;visibility:hidden;transform:translateY(100%);pointer-events:none}}
+@media (max-width:760px){.sticky-bar{display:grid;transition:opacity .3s ease,transform .3s ease,visibility .3s}body{padding-bottom:64px}.sticky-bar.ux-bar-hide{opacity:0;visibility:hidden;transform:translateY(100%);pointer-events:none}.hero-media{display:none}}
 
 /* reveal */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
@@ -601,6 +605,12 @@ footer a:hover{color:var(--gold)}
 
 <!-- HERO — framework grid, SAIM content -->
 <section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/video/hero-loom-poster.webp">
+      <source src="/assets/video/hero-loom.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
   <div class="wrap">
     <div>
       <span class="kicker">Direct Manufacturer of Apparel Accessories</span>
