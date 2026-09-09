@@ -207,4 +207,25 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
+
+    /* ---------- sticky-bar 顶部隐藏（防首屏 CTA 被遮；无 JS 时默认显示） ---------- */
+  function initStickyBar() {
+    var bar = document.querySelector('.sticky-bar');
+    if (!bar) return;
+    var hidden = false;
+    function onScroll() {
+      var y = window.scrollY || document.documentElement.scrollTop || 0;
+      if (y > 120 && hidden) { hidden = false; bar.classList.remove('ux-bar-hide'); }
+      else if (y <= 120 && !hidden) { hidden = true; bar.classList.add('ux-bar-hide'); }
+    }
+    var ticking = false;
+    function requestTick() {
+      if (!ticking) { window.requestAnimationFrame(function(){ onScroll(); ticking = false; }); ticking = true; }
+    }
+    window.addEventListener('scroll', requestTick, { passive: true });
+    onScroll();
+  }
+  initStickyBar();
+
+
 })();

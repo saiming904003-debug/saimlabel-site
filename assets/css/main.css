@@ -491,11 +491,15 @@ footer.site .brand b{color:var(--gold)}
 @media (max-width:760px){
   .wa-float{display:none}
   body{padding-bottom:64px}
-  .sticky-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;box-shadow:0 -4px 16px rgba(0,0,0,.4)}
+  .sticky-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;box-shadow:0 -4px 16px rgba(0,0,0,.4);transition:opacity .3s ease,transform .3s ease,visibility .3s}
   .sticky-bar a{flex:1;text-align:center;padding:15px 8px;font-weight:600;text-decoration:none;font-size:.95rem}
   .sticky-bar .wa{background:var(--green);color:#fff}
   .sticky-bar .qt{background:var(--btn-gold);color:#20160A}
+  /* JS 在页面顶部时加 .ux-bar-hide（防首屏 CTA 被遮）；无 JS 时默认显示，入口不丢 */
+  .sticky-bar.ux-bar-hide{opacity:0;visibility:hidden;transform:translateY(100%);pointer-events:none}
+  @media (prefers-reduced-motion:reduce){.sticky-bar,.sticky-bar.ux-bar-hide{transition:none}}
 }
+
 
 /* ---------------- 404 ---------------- */
 .notfound{text-align:center;padding-block:calc(var(--pad)*1.2)}
