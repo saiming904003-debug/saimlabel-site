@@ -42,6 +42,16 @@
       "permanent": true
     },
     {
+      "source": "/heat-transfer-printing-patch",
+      "destination": "/felt-sequin-patches/",
+      "permanent": true
+    },
+    {
+      "source": "/heat-transfer-printing-patch/",
+      "destination": "/felt-sequin-patches/",
+      "permanent": true
+    },
+    {
       "source": "/pvc-patches.html",
       "destination": "/pvc-patches/",
       "permanent": true
