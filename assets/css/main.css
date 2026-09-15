@@ -601,6 +601,6 @@ footer.site .brand b{color:var(--gold)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .form-note a{text-decoration:underline;text-underline-offset:2px}
 
-/* Anchor offset: keep in-page anchor targets clear of the sticky header (69px) */
+/* Anchor offset: keep in-page anchor targets clear of the sticky header (69px).
+   Only scroll-padding-top is used - adding scroll-margin-top on the targets would stack (88+88). */
 html{scroll-padding-top:88px}
-h2[id],h3[id],h4[id]{scroll-margin-top:88px}
