@@ -2,6 +2,16 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/woven-neck-labels/",
+      "destination": "/woven-labels/",
+      "permanent": true
+    },
+    {
+      "source": "/woven-neck-labels",
+      "destination": "/woven-labels/",
+      "permanent": true
+    },
+    {
       "source": "/custom-woven-labels.html",
       "destination": "/woven-labels/",
       "permanent": true
