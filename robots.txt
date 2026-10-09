@@ -43,4 +43,13 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
 Sitemap: https://www.saimlabel.com/sitemap.xml
