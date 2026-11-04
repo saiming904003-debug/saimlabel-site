@@ -42,6 +42,15 @@
 .ux-tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .ux-tscroll > table { min-width: 560px; }
 
+/* 5b. 让网格子项可收缩。
+   .split / .duo 的列默认 min-width:auto，内含 .ux-tscroll 时其 min-content
+   会被 560px 的表格撑住，1fr 轨道随之变宽，得到的是整页横向滚动，
+   而不是表格在容器内横滑（此前在 390px 视口实测 scrollWidth 576 > 390）。
+   显式设为 0 后，.ux-tscroll 才按容器宽度收缩并自行滚动。 */
+.split > *,
+.duo > *,
+.rfq .row > * { min-width: 0; }
+
 /* 6. 卡片图片微交互(按站点卡片类名补充,这里给通用 .card) */
 .card { overflow: hidden; }
 .card img { transition: transform .5s cubic-bezier(.22,.61,.36,1); }
