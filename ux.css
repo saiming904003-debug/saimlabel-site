@@ -74,3 +74,9 @@
 @media (max-width: 1024px) {
   input, select, textarea { font-size: 16px; }
 }
+
+/* 5c. grid-3 卡片在 <=720px 默认隐藏正文（.cards.grid-3 .card p{display:none}）。
+   价格/规格类卡片隐藏后就只剩标题，故意保留正文时给该网格加 cards--keep-copy。 */
+@media (max-width: 720px) {
+  .cards.grid-3.cards--keep-copy .card p { display: block; }
+}
