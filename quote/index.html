@@ -87,6 +87,17 @@
 <button class="btn primary" type="submit">Send RFQ</button>
 <p class="form-note">We reply to every RFQ by email or WhatsApp. Prefer direct contact? Email <a href="mailto:manager@saimlabel.com">manager@saimlabel.com</a>; artwork files can also be sent there. Attachments are sent with your RFQ through our form service; upload only files needed for quotation. See our <a href="/privacy/">privacy note</a>.</p>
 </form>
+<div class="rfq-fallback" id="rfqFallback" hidden>
+<h3>Your RFQ was not sent — but nothing is lost</h3>
+<p>Our form service did not respond just now. Your answers are still in the form above; send them with one click instead:</p>
+<div class="rfq-fallback-actions">
+<a class="btn primary" data-mailto href="mailto:manager@saimlabel.com">Send by email</a>
+<a class="btn ghost" data-whatsapp href="https://wa.me/8613416642457" target="_blank" rel="noopener">Send on WhatsApp</a>
+</div>
+<p class="rfq-fallback-addr">Or write to <a href="mailto:manager@saimlabel.com">manager@saimlabel.com</a> <button type="button" class="rfq-fallback-copy" data-copy>Copy address</button></p>
+<p class="rfq-fallback-warn" data-filewarn hidden>Your attached files cannot travel through an email link. Please re-attach them in your mail app, or send them on WhatsApp.</p>
+<p class="rfq-fallback-retry">You can also press <b>Send RFQ</b> again in a minute — the form itself is fine.</p>
+</div>
 </div></section>
 
 <section class="band shade tight"><div class="wrap"><div class="section-head"><span class="kicker">Before you ask</span>
@@ -135,6 +146,117 @@
 </a>
 </nav>
 <div class="sticky-bar"><a class="wa" href="https://wa.me/8613416642457?text=Hello%20SAIM%20Label%2C%20I%20would%20like%20a%20quote%20for%20custom%20woven%20labels%2C%20patches%20or%20keychains." target="_blank" rel="noopener">WhatsApp</a><a class="qt" href="/quote/">Get a Quote</a></div>
+<script>
+/* RFQ submit guard — 2026-11-06
+   背景：2026-11-06 实测 formsubmit.co 源站返回 Cloudflare 522，原生提交会把访客
+   带离本站落到报错页，既不发信也不回跳，询盘彻底丢失。
+   策略：改为 fetch 提交（可判定成败）；任何失败都不跳转，原地展开兜底面板，
+   用预填好的 mailto / WhatsApp 一键把同样内容发出去。
+   JS 失效时表单仍按原生 action 提交，不改变既有能力。 */
+(function () {
+  var form = document.querySelector("form.rfq");
+  var panel = document.getElementById("rfqFallback");
+  if (!form || !window.fetch || !window.FormData) return;
+
+  var AJAX = "https://formsubmit.co/ajax/manager@saimlabel.com";
+  var WA = "https://wa.me/8613416642457";
+  var TIMEOUT = 12000;
+
+  function fields() {
+    var out = {};
+    new FormData(form).forEach(function (v, k) {
+      if (typeof v === "string" && k.charAt(0) !== "_") out[k] = v;
+    });
+    return out;
+  }
+
+  function mailtoHref(d) {
+    var L = [];
+    if (d.product) L.push("Product: " + d.product);
+    L.push("Name: " + (d.name || ""));
+    L.push("Email: " + (d.email || ""));
+    if (d.quantity) L.push("Quantity: " + d.quantity);
+    if (d.whatsapp) L.push("WhatsApp: " + d.whatsapp);
+    if (d.market) L.push("Market: " + d.market);
+    if (d.deadline) L.push("Delivery date: " + d.deadline);
+    if (d.details) { L.push(""); L.push("Details:"); L.push(d.details); }
+    if (d.attachment_notes) { L.push(""); L.push("Attachment notes:"); L.push(d.attachment_notes); }
+    var subj = "RFQ from saimlabel.com" + (d.product ? " — " + d.product : "");
+    return "mailto:manager@saimlabel.com?subject=" + encodeURIComponent(subj) +
+           "&body=" + encodeURIComponent(L.join("\n"));
+  }
+
+  function waHref(d) {
+    var t = "Hello SAIM Label, I would like a quote.";
+    if (d.product) t += "\nProduct: " + d.product;
+    if (d.quantity) t += "\nQuantity: " + d.quantity;
+    if (d.details) t += "\nDetails: " + d.details;
+    return WA + "?text=" + encodeURIComponent(t);
+  }
+
+  function showFallback(d, hadFiles) {
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = false; btn.textContent = "Send RFQ"; }
+    if (!panel) return;
+    var m = panel.querySelector("[data-mailto]");
+    var w = panel.querySelector("[data-whatsapp]");
+    var f = panel.querySelector("[data-filewarn]");
+    if (m) m.href = mailtoHref(d);
+    if (w) w.href = waHref(d);
+    if (f) f.hidden = !hadFiles;
+    panel.hidden = false;
+    if (panel.scrollIntoView) panel.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  form.addEventListener("submit", function (e) {
+    if (form.getAttribute("data-native") === "1") return;
+    if (form.checkValidity && !form.checkValidity()) { return; }
+    e.preventDefault();
+
+    var d = fields();
+    var input = form.querySelector('input[type="file"]');
+    var hadFiles = !!(input && input.files && input.files.length);
+    var body = new FormData(form);
+    body.delete("_next");
+
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, TIMEOUT);
+
+    fetch(AJAX, {
+      method: "POST",
+      body: body,
+      headers: { "Accept": "application/json" },
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function (r) {
+      clearTimeout(timer);
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.text();
+    }).then(function (txt) {
+      var ok = false;
+      try { var j = JSON.parse(txt); ok = (j && (j.success === true || j.success === "true")); } catch (_) {}
+      if (!ok) throw new Error("rejected");
+      window.location.href = "/thanks/";
+    }).catch(function () {
+      clearTimeout(timer);
+      showFallback(d, hadFiles);
+    });
+  });
+
+  if (panel) {
+    var cp = panel.querySelector("[data-copy]");
+    if (cp) cp.addEventListener("click", function () {
+      var addr = "manager@saimlabel.com";
+      var done = function () {
+        cp.textContent = "Copied";
+        setTimeout(function () { cp.textContent = "Copy address"; }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(done, done);
+      } else { done(); }
+    });
+  }
+})();
+</script>
 <script src="/js/main.js" defer></script>
 <script src="/js/ux.js" defer></script>
 </body>
