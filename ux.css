@@ -100,3 +100,7 @@
   .rfq-fallback { padding: 16px; }
   .rfq-fallback-actions .btn { flex: 1 1 100%; }
 }
+.rfq-fallback:focus { outline: none; }
+.rfq-fallback:focus-visible { outline: 2px solid var(--accent, #8A6314); outline-offset: 2px; }
+.rfq-fallback--static { border-left-color: var(--line, #E0D4BA); margin-top: 16px; }
+.rfq-fallback--static p { margin: 0; }
