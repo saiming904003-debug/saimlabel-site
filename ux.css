@@ -104,3 +104,18 @@
 .rfq-fallback:focus-visible { outline: 2px solid var(--accent, #8A6314); outline-offset: 2px; }
 .rfq-fallback--static { border-left-color: var(--line, #E0D4BA); margin-top: 16px; }
 .rfq-fallback--static p { margin: 0; }
+
+/* 10. /quote/ 折叠式补充信息（2026-11-17）
+   背景：表单原有 10 个可见控件，/quote 的 4 个访客平均互动 47 秒却 0 次聚焦，
+   整块视觉上像长表格。把 quantity / whatsapp / market / deadline 收进 <details>，
+   首屏只留 product / name / email / details / 上传。折叠项仍在 DOM 内，FormData 照常提交。 */
+.rfq-more { margin: 14px 0 4px; border: 1px solid var(--line, #E0D4BA); border-radius: var(--r-card, 8px); background: var(--paper-2, #FAF5EA); }
+.rfq-more > summary { cursor: pointer; padding: 11px 14px; font-size: .9rem; font-weight: 600; color: var(--ink, #2B2B2B); list-style: none; display: flex; align-items: center; gap: 8px; }
+.rfq-more > summary::-webkit-details-marker { display: none; }
+.rfq-more > summary::before { content: "+"; display: inline-block; width: 14px; font-weight: 700; color: var(--accent, #8A6314); }
+.rfq-more[open] > summary::before { content: "\2212"; }
+.rfq-more > summary span { font-weight: 400; color: var(--ink-2, #5D5D5D); }
+.rfq-more > summary:hover { background: var(--paper-3, #F5EDDD); }
+.rfq-more[open] > summary { border-bottom: 1px solid var(--line, #E0D4BA); }
+.rfq-more .row { padding: 0 14px; }
+.rfq-more .row:last-child { padding-bottom: 12px; }
