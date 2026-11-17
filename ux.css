@@ -119,3 +119,18 @@
 .rfq-more[open] > summary { border-bottom: 1px solid var(--line, #E0D4BA); }
 .rfq-more .row { padding: 0 14px; }
 .rfq-more .row:last-child { padding-bottom: 12px; }
+
+/* 11. AI 可读 FAQ 与报价页说明（2026-11-17）
+   用原生 <details> 承载问答，内容始终在 DOM 内，便于 AI 抓取与摘录；
+   不用 max-height 折叠，避免内容被判为隐藏。 */
+.page-faq { display: grid; gap: 10px; margin-top: 18px; }
+.page-faq > details { border: 1px solid var(--line, #E0D4BA); border-radius: var(--r-card, 8px); background: var(--surface, #FFFDF7); padding: 0 16px; }
+.page-faq > details > summary { cursor: pointer; padding: 13px 0; font-weight: 600; font-size: .95rem; color: var(--ink, #2B2B2B); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.page-faq > details > summary::-webkit-details-marker { display: none; }
+.page-faq > details > summary::after { content: "+"; font-weight: 700; color: var(--accent, #8A6314); flex: 0 0 auto; }
+.page-faq > details[open] > summary::after { content: "\2212"; }
+.page-faq > details > summary:hover { color: var(--accent, #8A6314); }
+.page-faq > details[open] > summary { border-bottom: 1px solid var(--line, #E0D4BA); }
+.page-faq > details > p { margin: 0; padding: 12px 0 15px; font-size: .92rem; line-height: 1.6; color: var(--ink-2, #5D5D5D); }
+.quote-note { margin-top: 16px; font-size: .9rem; line-height: 1.6; color: var(--ink-2, #5D5D5D); }
+.quote-note strong { color: var(--ink, #2B2B2B); }
