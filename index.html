@@ -633,7 +633,7 @@ gtag('config', 'G-HGP6LQBXEN');
 <!-- HERO — framework grid, SAIM content -->
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/video/hero-model-forest-poster.webp">
+    <video class="hero-video" muted loop playsinline preload="none" poster="/assets/video/hero-model-forest-poster.webp">
       <source src="/assets/video/hero-model-forest.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -1115,6 +1115,31 @@ gtag('config', 'G-HGP6LQBXEN');
       {rootMargin:"0px 0px -8% 0px",threshold:.05});
     document.querySelectorAll(".rv").forEach(function(el){io.observe(el);});
   }else{document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in");});}
+})();
+</script>
+<script>
+/* Hero video moved off the critical path (2026-11-17).
+   Lab measurement on 11-17: the 778 KB autoplay mp4 was the LCP element and was
+   fetched on every visit, mobile included; homepage transferred 1.57 MB total.
+   Now the poster (103 KB) is what renders first, and the video is only pulled in
+   after the page goes idle, on viewports wide enough to actually show it. */
+(function () {
+  var v = document.querySelector("video.hero-video");
+  if (!v) return;
+  var conn = navigator.connection || {};
+  if (conn.saveData) return;
+  if (window.innerWidth < 900) return;
+  function start() {
+    if (v.getAttribute("data-started")) return;
+    v.setAttribute("data-started", "1");
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+  }
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(start, { timeout: 3000 });
+  } else {
+    setTimeout(start, 1800);
+  }
 })();
 </script>
 <script src="/js/ev.js?v=3" defer></script>
