@@ -81,13 +81,21 @@ gtag('config', 'G-HGP6LQBXEN');
 <label>Email<input type="email" name="email" autocomplete="email" required></label></div>
 <label>What do you need?
 <textarea name="details" rows="5" placeholder="Tell us the product, finished size, material or backing preference, where it will be used, and anything else that matters."></textarea></label>
+<label>Quantity <span class="rfq-opt">optional — an exact figure lets us quote precisely instead of a range</span>
+<select name="quantity">
+<option value="">Select a quantity range</option>
+<option>50–99 pcs (pilot run)</option>
+<option>100–499 pcs</option>
+<option>500–1,999 pcs</option>
+<option>2,000–9,999 pcs</option>
+<option>10,000+ pcs</option>
+<option>Not sure yet — advise me</option>
+</select></label>
 <details class="rfq-more">
-<summary>Quantity, WhatsApp and delivery date <span>(optional)</span></summary>
-<div class="row"><label>Quantity<input name="quantity" placeholder="Example: 500 pcs"></label>
-<label>WhatsApp (optional)<input name="whatsapp" placeholder="+1 …"></label></div>
-<div class="row"><label>Target market / country
-<input name="market" placeholder="Example: United States"></label>
-<label>Target delivery date<input name="deadline" placeholder="Example: end of August"></label></div>
+<summary>WhatsApp, target market and delivery date <span>(optional)</span></summary>
+<div class="row"><label>WhatsApp (optional)<input name="whatsapp" placeholder="+1 …"></label>
+<label>Target market / country<input name="market" placeholder="Example: United States"></label></div>
+<div class="row"><label style="grid-column:1/-1">Target delivery date<input name="deadline" placeholder="Example: end of August"></label></div>
 </details>
 <div class="rfq-upload" data-max-files="5" data-max-bytes="10485760">
 <div class="rfq-upload-head"><div><b>Product Photos / Artwork</b>

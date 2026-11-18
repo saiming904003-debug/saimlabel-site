@@ -134,3 +134,9 @@
 .page-faq > details > p { margin: 0; padding: 12px 0 15px; font-size: .92rem; line-height: 1.6; color: var(--ink-2, #5D5D5D); }
 .quote-note { margin-top: 16px; font-size: .9rem; line-height: 1.6; color: var(--ink-2, #5D5D5D); }
 .quote-note strong { color: var(--ink, #2B2B2B); }
+
+/* 11-18 询盘表单：数量字段从折叠块提出，改为可见分层下拉（仍为选填）
+   依据：2026-11-17 21:57 真实询盘（Alex，加拿大）表单字段中
+   quantity / whatsapp / market / deadline 全部为空 —— 折叠块未被点开，
+   而数量是 B2B 报价最核心的参数。故选填但不隐藏，且用区间降低填写成本。 */
+.rfq-opt { display: block; font-weight: 400; font-size: .82rem; color: var(--ink-2, #5D5D5D); margin-top: 2px; line-height: 1.45; }
