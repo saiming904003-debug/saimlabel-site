@@ -2,6 +2,16 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/quote/thank-you/",
+      "destination": "/thanks/",
+      "permanent": true
+    },
+    {
+      "source": "/quote/thank-you",
+      "destination": "/thanks/",
+      "permanent": true
+    },
+    {
       "source": "/woven-neck-labels/",
       "destination": "/woven-labels/",
       "permanent": true
