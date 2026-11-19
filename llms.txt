@@ -13,7 +13,7 @@
 - industry: Garment accessories manufacturing (woven labels, patches, keychains, care labels)
 - core_capabilities: computer weaving, label printing, screen printing, embroidery, heat transfer, ultrasonic cutting, laser cutting
 - main_products: woven labels, woven patches, woven keychains, care labels
-- other_products: embroidered patches, embroidered keychains, chenille patches, PVC patches, leather patches, felt/sequin patches, hang tags, heat transfer labels, woven sachetsls
+- other_products: embroidered patches, embroidered keychains, chenille patches, chenille letters, PVC patches, leather patches, felt/sequin patches, hang tags, heat transfer labels, woven sachets
 - moq: from 50 pieces for main products
 - sampling: artwork proof and physical sample before production
 - repeat_orders: faster (approved designs, molds and production settings kept on file)
@@ -45,6 +45,10 @@
 - [Leather Garment Care Labels](https://www.saimlabel.com/care-labels/leather/): Printed care labels for leather garments — MOQ 50 pcs per design, from $0.20/pc, 10–12 days production.
 - [Custom Chenille Letters](https://www.saimlabel.com/chenille-letters/): Chenille varsity letters in block, collegiate or script — MOQ 50 pcs per design, letters from $0.21/pc, 10–12 days production.
 - [Custom Christmas Patches](https://www.saimlabel.com/christmas-patches/): Seasonal holiday patch sets in embroidery on felt, chenille or felt die-cut — MOQ 50 pcs per design, pilot $0.60–$0.65/pc, production 10–12 days after proof.
+- [Sew-On Woven Patches](https://www.saimlabel.com/woven-patches/sew-on/): Woven patches built for stitching rather than pressing — stitched edge, laser cut or merrow border, sew channel; the route when a heat press is unavailable or the fabric cannot take one — MOQ 50 pcs per design, from $0.60/pc, 10–12 days production.
+- [Chenille Alphabet Letters](https://www.saimlabel.com/chenille-letters/alphabet/): Single chenille letters and short names for monograms, towels, robes and gift sets — loop-pile letters on a felt base, sew-on, MOQ 50 pcs per design, from $0.21/pc, 10–12 days production.
+- [Hook-and-Loop PVC Patches](https://www.saimlabel.com/pvc-patches/hook-and-loop/): Removable molded PVC patches on hook-and-loop backing — one garment, several patches, no stitching through the shell; the stiff hook side goes on the patch and the loop panel is sewn to the garment — MOQ 50 pcs per design, from $0.60/pc, 10–12 days production.
+- [3D Embossed PVC Patches](https://www.saimlabel.com/pvc-patches/3d-embossed/): Molded PVC patches where colour zones and relief levels are two separate decisions cut into the same tool — embossed, debossed or both on one patch — MOQ 50 pcs per design, from $0.60/pc, 10–12 days production.
 
 ## Key pages
 - [All products](https://www.saimlabel.com/products/)
