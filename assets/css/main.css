@@ -604,3 +604,12 @@ footer.site .brand b{color:var(--gold)}
 /* Anchor offset: keep in-page anchor targets clear of the sticky header (69px).
    Only scroll-padding-top is used - adding scroll-margin-top on the targets would stack (88+88). */
 html{scroll-padding-top:88px}
+
+/* Touch targets: navigation links (breadcrumbs, in-page TOC, footer nav) get a
+   44px hit area on small screens. In-paragraph links are left as-is per WCAG 2.5.8. */
+@media (max-width:760px){
+  .crumbs a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
+  .toc li{padding:0}
+  .toc a{display:flex;align-items:center;min-height:44px;padding:0}
+  footer.site a{display:flex;align-items:center;min-height:44px;padding:0}
+}
