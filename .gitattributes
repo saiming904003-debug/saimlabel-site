@@ -1,4 +1,5 @@
-# 二进制资源：禁止行尾转换*.pdf binary
+# Binary assets: never apply line-ending conversion
+*.pdf binary
 *.woff2 binary
 *.webp binary
 *.jpg binary
